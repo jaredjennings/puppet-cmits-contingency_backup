@@ -55,7 +55,7 @@ class contingency_backup::host(
     }
 
     file { "/etc/cron.daily/contingency_backup.cron":
-        owner => root, group => 0, mode => 0700,
+        owner => root, group => 0, mode => '0700',
         content => template("contingency_backup/cron.erb"),
     }
 }
